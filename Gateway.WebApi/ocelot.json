@@ -1,0 +1,64 @@
+{
+  "Routes": [
+    {
+      "DownstreamPathTemplate": "/api/product",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44303
+        }
+      ],
+      "UpstreamPathTemplate": "/gateway/product",
+      "UpstreamHttpMethod": [ "POST", "PUT", "GET" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/product/{id}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44303
+        }
+      ],
+      "UpstreamPathTemplate": "/gateway/product/{id}",
+      "UpstreamHttpMethod": [ "GET", "DELETE" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/customer",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44350
+        }
+      ],
+      "UpstreamPathTemplate": "/gateway/customer",
+      "UpstreamHttpMethod": [ "POST", "PUT", "GET" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/product/{id}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44350
+        }
+      ],
+      "UpstreamPathTemplate": "/gateway/customer/{id}",
+      "UpstreamHttpMethod": [ "GET", "DELETE" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/smart",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "entapp-001-site9.itempurl.com",
+          "Port": 1433
+        }
+      ],
+      "UpstreamPathTemplate": "/gateway/smart",
+      "UpstreamHttpMethod": [ "POST", "GET" ]
+    }
+  ]
+}
